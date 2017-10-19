@@ -15,7 +15,8 @@ public class CSVReader {
     private void spustiReader() {
 
         nacitanie.nacitajPrvky();
-        vypis.vypisRiadkyPrvkov(nacitanie.vratPrvky());
+        //vypis.vypisRiadkyPrvkov(nacitanie.vratPrvky());
+        vypis.vypisRiadkyPrvkocExcelFormat(nacitanie.vratPrvky());
 
         vypis.vypisPrazdnyRiadok();
         vypis.vypisPocetRiadkov(nacitanie.vratPocetRiadkov());

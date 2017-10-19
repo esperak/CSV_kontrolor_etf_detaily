@@ -18,6 +18,36 @@ public class Vypis {
         }
     }
 
+    public void vypisRiadkyPrvkocExcelFormat(ArrayList<String[]> pole) {
+        for (String[] prvok : pole)
+            System.out.println(prevedIdNaTicker(prvok[0])+"\t"+prvok[3]);
+    }
+
+    public String prevedIdNaTicker(String id_etf) {
+        String nazov = "";
+        switch (id_etf) {
+            case "20451":
+                nazov = "SILJ";
+                break;
+            case "19956":
+                nazov = "HACK";
+                break;
+            case "28356":
+                nazov = "GAMR";
+                break;
+            case "28456":
+                nazov = "IPAY";
+                break;
+            case "28446":
+                nazov = "IFLY";
+                break;
+            default:
+                nazov = "ziaden";
+                break;
+        }
+        return nazov;
+    }
+
     public void vypisPocetRiadkov (int pocet_riadkov) {
         System.out.println("Pocet riadkov "+pocet_riadkov);
     }
